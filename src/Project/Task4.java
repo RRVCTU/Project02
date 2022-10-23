@@ -33,16 +33,16 @@ class ChromeDriver implements RemoteWebDriver{
     }
     @Override
    public String getTitle() {
-        System.out.println("get title the Chrome");
+        System.out.println("get title the Chrome browser");
         return title;
     }
     @Override
     public void getScreenshot() {
-        System.out.println("get screenshoot the Chrome");
+        System.out.println("get screenshoot the Chrome browser");
     }
     @Override
     public void navigate() {
-        System.out.println("navigate the Chrome");
+        System.out.println("navigate the Chrome browser");
     }
 }
 
