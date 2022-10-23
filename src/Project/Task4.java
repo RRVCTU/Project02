@@ -25,11 +25,11 @@ class ChromeDriver implements RemoteWebDriver{
     String title = "Chrome";
     @Override
     public void open() {
-        System.out.println("open the Chrome");
+        System.out.println("open the Chrome browser");
     }
     @Override
     public void close() {
-        System.out.println("close the Chrome");
+        System.out.println("close the Chrome browser");
     }
     @Override
    public String getTitle() {
