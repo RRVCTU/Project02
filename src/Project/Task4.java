@@ -1,8 +1,8 @@
 package Project;
 
 public class Task4 {
-}
 
+}
 /* Provide Implementation for the diagram below.
  * Then create a test class in which you need to create Objects of ChromeDriver, FirefoxDrive and SafariDriver
  * classes and see which methods available to them.
@@ -13,16 +13,15 @@ interface WebDriver {
     void close();
     String getTitle();
 }
-interface TakesScheenshot {
+interface TakesScreenshot {
     void getScreenshot();
 }
 
-interface RemoteWebDriver extends WebDriver, TakesScheenshot {
+interface RemoteWebDriver extends WebDriver, TakesScreenshot {
     void navigate();
 }
 
 class ChromeDriver implements RemoteWebDriver{
-    String title = "Chrome";
     @Override
     public void open() {
         System.out.println("open the Chrome browser");
@@ -33,7 +32,7 @@ class ChromeDriver implements RemoteWebDriver{
     }
     @Override
    public String getTitle() {
-        System.out.println("get title the Chrome browser");
+        String title = "Chrome";
         return title;
     }
     @Override
@@ -47,7 +46,6 @@ class ChromeDriver implements RemoteWebDriver{
 }
 
 class FirefoxDrive implements RemoteWebDriver {
-    String title = "Firefox";
     @Override
     public void open() {
         System.out.println("open the Firefox");
@@ -58,7 +56,7 @@ class FirefoxDrive implements RemoteWebDriver {
     }
     @Override
     public String getTitle() {
-        System.out.println("get title the Firefox");
+        String title = "Firefox";
         return title;
     }
     @Override
@@ -72,7 +70,6 @@ class FirefoxDrive implements RemoteWebDriver {
 }
 
 class SafariDriver implements RemoteWebDriver {
-    String title = "Safari";
     @Override
     public void open() {
         System.out.println("open the Safari");
@@ -83,7 +80,7 @@ class SafariDriver implements RemoteWebDriver {
     }
     @Override
     public String getTitle() {
-        System.out.println("get title the Safari");
+        String title = "Safari";
         return title;
     }
     @Override
@@ -105,7 +102,7 @@ class Test {
 
             web.open();
             web.close();
-            web.getTitle();
+            System.out.println(web.getTitle());
             web.getScreenshot();
             web.navigate();
             System.out.println("----------------------");
