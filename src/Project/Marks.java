@@ -48,9 +48,9 @@ class testStudent {
     public static void main(String[] args) {
 
         Marks studentA = new A(4, 5, 4);
-        System.out.println("Average score for student A: "+studentA.getPercentage());
+        System.out.println("Average Score for student A: "+studentA.getPercentage());
 
         Marks studentB = new B(90.0, 76.0, 100, 79.0);
-        System.out.println("Average score for student B: "+studentB.getPercentage());
+        System.out.println("Average Score for student B: "+studentB.getPercentage());
     }
 }
